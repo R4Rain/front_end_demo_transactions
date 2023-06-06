@@ -1,13 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply m-0 font-inter;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.background_box{
+  @apply fixed z-0 min-h-screen w-screen bg-gray-900 flex justify-center pointer-events-none;
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col mx-auto sm:px-16 px-4 py-4;
+}
+
+/* Table Styles */
+.table_row{
+  @apply border-b bg-gray-800 border-gray-700;
+}
+
+.column_gap{
+  @apply px-3 py-4;
+}
+
+.failed_badge{
+  @apply text-xs font-medium mr-2 px-2.5 py-0.5 rounded bg-red-900 text-red-300;
+}
+
+.success_badge{
+  @apply text-xs font-medium mr-2 px-2.5 py-0.5 rounded bg-green-900 text-green-300;
+}
+
+.add_btn{
+  @apply text-white text-center focus:ring-4 font-medium rounded-lg text-sm px-4 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800;
+}
+
+/* Form Styles */
+.input_label{
+  @apply block mb-2 text-sm font-medium text-white;
+}
+
+.input_box{
+  @apply border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 shadow-sm;
+}
+
+.error_msg{
+  @apply mt-2 text-sm font-medium text-red-500;
+}
+
+.submit_btn{
+  @apply text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800;
 }
